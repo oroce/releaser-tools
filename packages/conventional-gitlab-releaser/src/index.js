@@ -83,7 +83,8 @@ function conventionalGitlabReleaser (auth, changelogOpts, context, gitRawCommits
               description: chunk.log
             }
           }
-
+          debug(`posting %o to the following URL - ${url}`, options)
+        
           // Set auth after debug output so that we don't print auth token to console.
           options.token = auth.token
 
